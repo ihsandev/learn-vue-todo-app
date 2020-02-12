@@ -1,19 +1,14 @@
 <template>
   <div>
     <form @submit="addTodo" class="input-todo">
-      <input
-        v-model="title"
-        type="text"
-        name="title"
-        placeholder="Add Todo .."
-      />
+      <input v-model="title" type="text" name="title" placeholder="Add Todo .." />
       <input class="btn" type="submit" value="Add" />
     </form>
   </div>
 </template>
 
 <script>
-import uuid from "uuid";
+// import uuid from "uuid";
 
 export default {
   name: "AddTodo",
@@ -26,7 +21,6 @@ export default {
     addTodo(e) {
       e.preventDefault();
       const newTodo = {
-        id: uuid.v4(),
         title: this.title,
         completed: false
       };
